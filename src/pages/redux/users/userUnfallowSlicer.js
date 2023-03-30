@@ -15,13 +15,13 @@ export const unfollowUser = createAsyncThunk(
       `https://api.github.com/user/following/${userDetailName}`,
       {
         headers: {
-          Authorization: `token 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`,
+          Authorization: `token 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`,
           Accept: "application/vnd.github.v3+json",
         },
       }
     );
 
-    console.log(response);
+    //console.log(response);
     return response.status;
   }
 );
@@ -41,7 +41,7 @@ export const userUnfollowSlice = createSlice({
     [unfollowUser.fulfilled]: (state, action) => {
       state.unfollowStatus = "succeeded";
       state.unfollowedUser = action.payload;
-      console.log(action.payload);
+      //console.log(action.payload);
     },
     [unfollowUser.rejected]: (state, action) => {
       state.unfollowStatus = "failed";

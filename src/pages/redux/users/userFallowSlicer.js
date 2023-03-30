@@ -16,13 +16,13 @@ export const followUser = createAsyncThunk(
       {},
       {
         headers: {
-          Authorization: `token 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`,
+          Authorization: `token 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`,
           Accept: "application/vnd.github.v3+json",
         },
       }
     );
 
-    console.log(response);
+    //console.log(response);
     return response.status;
   }
 );
@@ -42,7 +42,7 @@ export const userFollowSlice = createSlice({
     [followUser.fulfilled]: (state, action) => {
       state.followStatus = "succeeded";
       state.followedUser = action.payload;
-      console.log(action.payload);
+      //console.log(action.payload);
     },
     [followUser.rejected]: (state, action) => {
       state.followStatus = "failed";

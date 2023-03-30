@@ -16,12 +16,12 @@ export const getUsers = createAsyncThunk(
       {
         headers: {
           Accept: "application/vnd.github.v3+json",
-          Authorization: `token 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`,
+          Authorization: `token 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`,
         },
       }
     );
     return response.data.items;
-    console.log(response.data.items);
+    //console.log(response.data.items);
   }
 );
 
